@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <div class="container">
+        <h2 id="txt">Document Object Model</h2>
+        
+        <div class="spc">Clique em mim!</div>
+
+        
+        <script>
+            //Selecionando Elementos com o DOM
+            var p1 = document.querySelector('div.spc')
+            p1.innerText = 'Olá Humanos!'
+            var p2 = document.getElementById('txt')
+            p2.innerText = 'Olá Mundo!'
+        </script>
+    </div>
+    <footer>&copy Adriano Brito de Mendonça</footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <style>
+        .area{
+            height: 350px;
+            width: 350px;
+            font: normal 20pt Arial;
+            background-color: rgb(2, 161, 2);
+            color: white;
+            line-height: 350px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos DOM</h1>
+    <div class="container">
+        <h2 id="txt">Document Object Model</h2>
+        
+        <div class="area">Clique em mim!</div>
+
+        <script>
+            var a = document.querySelector('div.area')
+
+            a.addEventListener('click', clique)
+            a.addEventListener('mouseenter', entrar)
+            a.addEventListener('mouseout', sair)
+
+            function clique(){
+                a.innerText = 'Clicou!'
+                a.style.background = 'red'
+            }
+
+            function entrar(){
+                a.innerText = 'Entrou!'
+            }
+
+            function sair(){
+                a.innerText = 'Saiu!'
+                a.style.background = 'green'
+            }
+        </script>
+
+        <div class="cuidado">
+            <h2>ATENÇÃO!</h2>
+            <p>Para ver mais eventos do DOM, acessar <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">event referente</a>.</p>
+        </div>
+    </div>
+    <footer>&copy Adriano Brito de Mendonça</footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <style>
+        input{
+            font: normal 12pt Arial;
+            width: 100px;
+        }
+
+        div#res{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <div class="container">
+        <h2>Recebendo e somando valores</h2>
+        <input type="number" name="n1" id="n1"> +
+        <input type="number" name="n2" id="n2"> =
+        <input type="button" value="Somar" onclick="somar()">
+        <div id="resultado"><p>Resultado...</p></div>
+
+        <script>
+            function somar(){
+                var n1 = document.getElementById('n1')
+                var n2 = document.querySelector('input#n2')
+                var num1 = Number(n1.value)
+                var num2 = Number(n2.value)
+
+                var res = document.getElementById('resultado')
+                let s = num1 + num2
+                res.innerHTML = `<p>A soma entre ${num1} e ${num2} é <strong>${s}</strong></p>`
+            }
+        </script>
+
+    </div>
+    <footer>&copy Adriano Brito de Mendonça</footer>
+</body>
+</html>

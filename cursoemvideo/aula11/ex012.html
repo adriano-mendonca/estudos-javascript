@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Velocidade</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <style>
+        span {
+            background-color: red;
+            font-weight: bold;
+            color: white;
+        }
+
+        input {
+            font: normal 14pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <div class="container">
+        <p>Velocidade do carro: <input type="number" name="velocidade" id="velocidade"> Km/h 
+            <input type="button" value="Verificar" onclick="verificar()">
+        </p>
+        <div class="radar"><p>Obtendo Velocidade...</p></div>
+    </div>
+    
+    <script>
+        function verificar(){
+            var vel = document.querySelector('input#velocidade')
+            var res = document.querySelector('div.radar')
+            velocidade = Number(vel.value)
+
+            if(velocidade > 80){
+                res.innerHTML = '<p>Velocidade <strong>acima</strong> do limite permitido! <span>Multado!<span></p>'
+            } else {
+                res.innerHTML = '<p>Velocidade <strong>dentro</strong> do limite permitido! Dirija com segurança!'
+            }
+        }
+    </script>
+</body>
+</html>
