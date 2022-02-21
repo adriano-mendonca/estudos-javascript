@@ -46,6 +46,7 @@
         var res = document.querySelector('div.container')
 
         res.innerHTML = `<p>Agora são ${hr}:${min}:${sec}</p>`
+        
         if(hr > 0 && hr < 12){
             res.innerHTML += `<img src="images/manha.png" alt="Bom Dia!">`
             document.body.style.background = 'rgba(186, 206, 77, 0.89)'
