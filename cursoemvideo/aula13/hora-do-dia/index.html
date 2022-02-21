@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        body{
+            font: normal 12pt Arial;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .container {
+            width: 600px;
+            height: 500px;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+        }
+
+        footer{
+            font: normal 10pt Arial;
+            color: white;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Horas do Dia</h1>
+    <div class="container">
+    </div>
+    <footer>&copy;Adriano Brito de Mendonça</footer>
+
+    <script>
+        var data = new Date()
+        var hr = data.getHours()
+        var min = data.getMinutes()
+        var sec = data.getSeconds()
+        var res = document.querySelector('div.container')
+
+        res.innerHTML = `<p>Agora são ${hr}:${min}:${sec}</p>`
+        if(hr > 0 && hr < 12){
+            res.innerHTML += `<img src="images/manha.png" alt="Bom Dia!">`
+            document.body.style.background = 'rgba(186, 206, 77, 0.89)'
+        } else if (hr < 18){
+            res.innerHTML += `<img src="images/tarde.png" alt="Boa Tarde!">`
+            document.body.style.background = 'rgb(168, 111, 4)'
+        } else {
+            res.innerHTML += `<img src="images/noite.png" alt="Boa Noite!">`
+            document.body.style.background = 'rgba(25, 75, 116, 0.89)'
+        }
+    </script>
+</body>
+</html>
