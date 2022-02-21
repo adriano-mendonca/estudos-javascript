@@ -1,0 +1,27 @@
+body {
+    background-color: rgba(44, 44, 247, 0.945);
+    font: normal 12pt Arial;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.4);
+}
+
+.container{
+    height: 580px;
+    width: 700px;
+    background-color: white;
+    box-shadow: 2px 2px 2px  rgba(0,0,0,.4);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+footer {
+    color: white;
+    font: normal 10pt Arial;
+    font-style: italic;
+    margin-top: 10px;
+}
