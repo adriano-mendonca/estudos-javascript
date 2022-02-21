@@ -1,29 +1,25 @@
 body{
     font: normal 12pt Arial;
-    
-    background-color: rgb(18, 60, 199);
+    text-align: center;
 }
 
 h1 {
     color: white;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
-    text-align: center;
 }
 
 .container {
     width: 600px;
-    height: auto;
+    height: 500px;
     border-radius: 10px;
     margin: 20px auto;
     padding: 10px;
     background-color: white;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
-    text-align: left;
 }
 
 footer{
     font: normal 10pt Arial;
     color: white;
     font-style: italic;
-    text-align: center;
 }

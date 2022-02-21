@@ -9,75 +9,27 @@
 </head>
 <body>
     <h1>Verificador de Idade</h1>
-    <div class="container">
-        <p>Ano de Nascimento: <input type="number" name="ano" id="ano"></p>
-        <p>Sexo: <input type="checkbox" name="man" id="man" checked>Masculino <input type="checkbox" name="woman" id="woman">Feminino <input type="button" value="Verificar" onclick="verificar()"></p>
-        
-        <div class="res"></div>
-    </div>
+        <section class="container">
+            <div>
+                <p>Ano de Nascimento:
+                    <input type="number" name="ano" id="ano" min="1960">
+                </p>
+                <p>Sexo: 
+                    <input type="radio" name="radsex" id="masc" checked>
+                    <label for="masc">Masculino</label>
+                    <input type="radio" name="radsex" id="fem">
+                    <label for="fem">Feminino</label>
+                </p>
+                <p>
+                    <input type="button" value="Verificar" onclick="verificar()">
+                </p>
+            </div>
+            <div id="res">
+                Preencha os dados acima!
+            </div>
+        </section>
     <footer>&copyAdriano Brito de Mendonça</footer>
 
-    <script>
-        var cxman = document.querySelector('input#man')
-        var cxwoman = document.querySelector('input#woman')
-        cxman.addEventListener('click', man)
-        cxwoman.addEventListener('click', woman)
-
-        function man(){
-            cxwoman.checked = false
-        }
-
-        function woman(){
-            cxman.checked = false
-        }
-
-        function verificar(){
-            var res = document.querySelector('div.res')
-            var idade = document.querySelector('input#ano')
-            var year = new Date()
-            var ano = year.getFullYear()
-            var id = ano - Number(idade.value)
-            var sex
-            
-            if (cxman.checked == true){
-                sex = 'Homem'
-            } else {
-                sex = 'Mulher'
-            }
-            if(cxman.checked == false && cxwoman.checked == false){
-                res.innerHTML = window.alert('[ERRO]Sexo INVÁLIDO!')
-            } else {
-                if (Number(idade.value) > ano || toString(idade).length == 0){
-                    res.innerHTML = window.alert('[ERRO]Ano de nascimento INVÁLIDO!')
-                } else {
-                    if (id < 12 && sex == 'Homem'){
-                        res.innerHTML = `<p>Identificamos <strong>${sex}</strong> com ${id} anos.</p>`
-                        res.innerHTML += '<img src="images/crianca-menino.png">'
-                    } else if ( id < 12 && sex == 'Mulher') {
-                        res.innerHTML = `<p>Identificamos <strong>${sex}</strong> com ${id} anos.</p>`
-                        res.innerHTML += '<img src="images/crianca-menina.png">'
-                    } else if (id <= 18 && sex == 'Homem'){
-                        res.innerHTML = `<p>Identificamos <strong>${sex}</strong> com ${id} anos.</p>`
-                        res.innerHTML += '<img src="images/adolescente-homem.png">'
-                    } else if (id <= 18 && sex == 'Mulher'){
-                        res.innerHTML = `<p>Identificamos <strong>${sex}</strong> com ${id} anos.</p>`
-                        res.innerHTML += '<img src="images/adolescente-mulher.png">'
-                    } else if (id < 50 && sex == 'Homem'){
-                        res.innerHTML = `<p>Identificamos <strong>${sex}</strong> com ${id} anos.</p>`
-                        res.innerHTML += '<img src="images/adulto-homem.png">'
-                    } else if (id < 50 && sex == 'Mulher'){
-                        res.innerHTML = `<p>Identificamos <strong>${sex}</strong> com ${id} anos.</p>`
-                        res.innerHTML += '<img src="images/adulto-mulher.png">'
-                    } else if (sex == 'Homem'){
-                        res.innerHTML = `<p>Identificamos <strong>${sex}</strong> com ${id} anos.</p>`
-                        res.innerHTML += '<img src="images/idoso.png">'
-                    } else {
-                        res.innerHTML = `<p>Identificamos <strong>${sex}</strong> com ${id} anos.</p>`
-                        res.innerHTML += '<img src="images/idosa.png">'
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
