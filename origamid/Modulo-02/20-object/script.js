@@ -1,7 +1,7 @@
 // Crie uma função que verifique corretamente o tipo de dado
 
 function verificar(dado){
-    return Object.prototyp.toString.call(dado)
+    return Object.prototype.toString.call(dado)
 }
 // Crie um objeto quadrado com a propriedade lados e torne ela imutável
 
