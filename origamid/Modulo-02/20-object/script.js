@@ -22,7 +22,7 @@ const configuracao = {
     background: '#333'
 }
 
-Object.freeze(configuracao))
+Object.freeze(configuracao)
 
 // Liste o nome de todas as propriedades do protótipo de String e Array
 
