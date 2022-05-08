@@ -11,7 +11,7 @@ export default function initModal(){
 
   function cliqueForaModal(event){
     if(event.target == this){
-      fecharModal(event)
+      toggleModal(event)
     }
   }
 
